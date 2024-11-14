@@ -984,8 +984,8 @@ section,
 
 .speakers .member .member-info {
   position: absolute;
-  padding: 15px 0;
-  inset: auto 0 -44px 0;
+  padding: 10px 0;
+  inset: auto 0 0 0;
   background: rgba(0, 0, 0, 0.6);
   transition: 0.4s;
 }
@@ -1030,10 +1030,6 @@ section,
 .speakers .member .social i {
   font-size: 18px;
   margin: 0 2px;
-}
-
-.speakers .member:hover .member-info {
-  bottom: 0;
 }
 
 /*--------------------------------------------------------------

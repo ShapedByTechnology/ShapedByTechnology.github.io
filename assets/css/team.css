@@ -44,4 +44,22 @@
      radial-gradient(at 30% 31%,#000 29%,#0000 30%),
      linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
     clip-path: polygon(-41% 0,50% 91%, 141% 0);
-  }
+}
+
+.ee .eemain {
+    pointer-events: none;
+    display: inline;
+}
+
+.ee .eesecondary {
+    pointer-events: none;
+    display: none;
+}
+
+.ee:active .eemain {
+    display: none;
+}
+
+.ee:active .eesecondary {
+    display: inline;
+}

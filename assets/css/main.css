@@ -14,6 +14,7 @@
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
+  --master-font: "Telegraf", "Raleway",  sans-serif;
   --nav-font: "Raleway",  sans-serif;
 }
 
@@ -29,7 +30,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.65);  /* The default color of the main navmenu links */
+  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -226,7 +227,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -236,7 +237,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 72px;
   margin-right: 8px;
 }
 
@@ -891,7 +892,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -904,8 +905,19 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-family: var(--master-font);
+  font-size: 56px;
   font-weight: 700;
+  text-shadow: 2px 2px 20px #000000;
+}
+
+.hero h2 img {
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  width: 60px;
+  height: 60px;
+  margin: 0px 5px;
 }
 
 .hero h2 span {
@@ -913,7 +925,8 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  text-shadow: 2px 2px 20px #000000;
+  color: color-mix(in srgb, var(--default-color));
   margin: 10px 0 0 0;
   font-size: 24px;
 }
@@ -959,13 +972,13 @@ section,
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 10px;
   color: #fff;
 }
 
 .hero .about-info p {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin: 10px;
   color: #fff;
 }
 
@@ -1517,6 +1530,7 @@ section,
   font-weight: 500;
   transition: 0.3s;
   font-family: var(--heading-font);
+  margin: 20px;
 }
 
 .buy-tickets .buy-btn:hover {
@@ -1551,13 +1565,13 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
+.info-item {
   background-color: var(--surface-color);
   padding: 20px 0 30px 0;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact .info-item i {
+.info-item i {
   font-size: 20px;
   color: var(--accent-color);
   width: 56px;
@@ -1572,17 +1586,21 @@ section,
   border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
 }
 
-.contact .info-item h3 {
+.info-item h3 {
   font-size: 20px;
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0;
 }
 
-.contact .info-item p {
+.info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.info-item a {
+  color: var(--heading-color);
 }
 
 .contact .php-email-form {

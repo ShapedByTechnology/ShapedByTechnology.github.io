@@ -1142,6 +1142,23 @@ section,
   transition: all ease-in-out 0.3s;
 }
 
+.schedule .schedule-item .speaker i {
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+  font-size: 20px;
+  color: var(--heading-color);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border-radius: 50%;
+  border: 2px dotted color-mix(in srgb, var(--heading-color), transparent 40%);
+}
+
 .schedule .schedule-item h4 {
   font-size: 18px;
   font-weight: 600;
@@ -1159,6 +1176,7 @@ section,
   font-style: italic;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 /*--------------------------------------------------------------
